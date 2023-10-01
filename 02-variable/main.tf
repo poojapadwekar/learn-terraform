@@ -16,3 +16,7 @@ variable "fruits_print" {
 output "fruiit" {
   value = var.fruit
 }
+
+output "fruits" {
+  value = var.fruits[0]
+}
