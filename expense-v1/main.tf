@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z00236712TJAPP7J1TL57"
-  name    = "backend.saujpoo.online"
+  name    = "frontend.saujpoo.online"
   type    = "A"
   ttl     = 300
   records = [aws_instance.frontend.private_ip]
@@ -24,9 +24,9 @@ resource "aws_instance" "backend" {
   }
 }
 
-resource "aws_route53_record" "web" {
+resource "aws_route53_record" "backend" {
   zone_id = "Z00236712TJAPP7J1TL57"
-  name    = "test.saujpoo.online"
+  name    = "backend.saujpoo.online"
   type    = "A"
   ttl     = 300
   records = [aws_instance.backend.private_ip]
