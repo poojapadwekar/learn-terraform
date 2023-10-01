@@ -13,10 +13,15 @@ variable "fruits_print" {
   }
 }
 
-output "fruiit" {
+output "fruit" {
   value = var.fruit
 }
 
 output "fruits" {
   value = var.fruits[0]
+
+}
+
+output "fruits_print" {
+  value = "Price of apple = ${var.fruits_print["apple"]}"
 }
