@@ -41,7 +41,7 @@ resource "aws_instance" "mysql" {
   }
 }
 
-resource "aws_route53_record" "web" {
+resource "aws_route53_record" "mysql" {
   zone_id = "Z00236712TJAPP7J1TL57"
   name    = "mysql.saujpoo.online"
   type    = "A"
