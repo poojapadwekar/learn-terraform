@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z00236712TJAPP7J1TL57"
+  zone_id = data.aws_route53_zone.zone.zone_id
   name    = "frontend.saujpoo.online"
   type    = "A"
   ttl     = 300
@@ -25,7 +25,7 @@ resource "aws_instance" "backend" {
 }
 
 resource "aws_route53_record" "backend" {
-  zone_id = "Z00236712TJAPP7J1TL57"
+  zone_id = data.aws_route53_zone.zone.zone_id
   name    = "backend.saujpoo.online"
   type    = "A"
   ttl     = 300
@@ -42,7 +42,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = "Z00236712TJAPP7J1TL57"
+  zone_id = data.aws_route53_zone.zone.zone_id
   name    = "mysql.saujpoo.online"
   type    = "A"
   ttl     = 300

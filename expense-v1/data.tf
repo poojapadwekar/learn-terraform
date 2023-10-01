@@ -10,7 +10,11 @@ data "aws_security_group" "sg" {
   name = "allow-all"
 }
 
-data "aws_route53_zone" "selected" {
-  name         = "test.com."
-  private_zone = true
+
+data "aws_route53_zone" "zone" {
+  name = var.zone_id
+}
+
+variable "zone_id" {
+  default = "saujpoo.online"
 }
