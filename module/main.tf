@@ -3,3 +3,8 @@ module "test" {
   input = "Hello Universe"
 
 }
+
+variable "input" {
+  default = "Hello Universe"
+
+}
