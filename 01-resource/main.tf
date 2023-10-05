@@ -14,3 +14,4 @@ resource "aws_route53_record" "web" {
   ttl     = 300
   records = [aws_instance.web.private_ip]
 }
+
